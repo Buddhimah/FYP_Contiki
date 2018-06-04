@@ -30,7 +30,7 @@
 #define PRINTLLADDR(addr)
 #endif
 
-char temp[100]=100;
+char temp[100]="100" ;
 
 
 

@@ -6,6 +6,7 @@
 #include "rest.h"
 #include "buffer.h"
 
+
 #define DEBUG 1
 #if DEBUG
 #include <stdio.h>
@@ -103,7 +104,7 @@ PROCESS_THREAD(coap_client_example, ev, data)
   client_conn = udp_new(&server_ipaddr, UIP_HTONS(REMOTE_PORT), NULL);
   udp_bind(client_conn, UIP_HTONS(LOCAL_PORT));
 
-  PRINTF("Created a connection with the server BUDDHIMA");
+  PRINTF("Created a connection with the server BUDDHIMA\n");
   PRINT6ADDR(&client_conn->ripaddr);
   PRINTF(" local/remote port %u/%u\n",
   UIP_HTONS(client_conn->lport), UIP_HTONS(client_conn->rport));
