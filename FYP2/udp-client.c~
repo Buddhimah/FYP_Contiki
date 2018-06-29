@@ -90,7 +90,7 @@ sprintf( buf, " %d" , x);
 
   PRINTF("DATA send to %d 'Meter Value Is %d %d'\n",
          server_ipaddr.u8[sizeof(server_ipaddr.u8) - 1],x, seq_id);
-  sprintf(buf, "MeterValue %d from the client", seq_id);
+  sprintf(buf, "MeterValue %d from the client", x);
   uip_udp_packet_sendto(client_conn, buf, strlen(buf),
                         &server_ipaddr, UIP_HTONS(UDP_SERVER_PORT));
 }
