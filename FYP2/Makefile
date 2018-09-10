@@ -1,5 +1,6 @@
-all: udp-client udp-server
-APPS=servreg-hack
+CONTIKI_PROJECT = collect-view-shell udp-client udp-server
+all: $(CONTIKI_PROJECT)
+APPS=servreg-hack serial-shell powertrace collect-view
 CONTIKI=../../..
 
 WITH_UIP6=1
@@ -20,3 +21,10 @@ CFLAGS+=-DPERIOD=$(PERIOD)
 endif
 
 include $(CONTIKI)/Makefile.include
+
+
+
+
+
+
+
